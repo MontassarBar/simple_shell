@@ -83,7 +83,7 @@ exit(0);
 }
 else
 wait(NULL);
-return(0);
+return (0);
 }
 /**
  *pathcmd - path handle
