@@ -21,7 +21,7 @@ return (0);
  */
 char *get_line()
 {
-size_t bufsize, c;
+size_t bufsize, c, x = -1;
 char *buffer = malloc(sizeof(char));
 if (!buffer)
 {
@@ -34,7 +34,7 @@ while (bufsize == 2)
 {
 write(STDOUT_FILENO, "$ ", 2);
 c = getline(&buffer, &bufsize, stdin);
-if (c == -1)
+if (c == x)
 exit(0);
 }
 buffer[c - 1] = '\0';
@@ -52,7 +52,7 @@ return (buffer);
 char **tok_buff(char *buffer)
 {
 char *str;
-size_t x, bufsize = 2;
+size_t x;
 char **cmd = malloc(sizeof(char *) * 10);
 str = strtok(buffer, " ");
 for (x = 0; str != NULL && x < 16; x++)
@@ -83,6 +83,7 @@ exit(0);
 }
 else
 wait(NULL);
+return(0);
 }
 /**
  *pathcmd - path handle

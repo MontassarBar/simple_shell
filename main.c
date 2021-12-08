@@ -6,9 +6,7 @@
 int main(void)
 {
 char *buffer, **cmd;
-char *str;
 struct stat st;
-size_t x;
 buffer = malloc(sizeof(char));
 if (!buffer)
 {
