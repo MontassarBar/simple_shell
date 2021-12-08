@@ -5,21 +5,13 @@
  */
 int printenv(void)
 {
-char *envnames[12] = {"USER", "LANGUAGE", "SESSION", "COMPIZ_CONFIG_PROFILE"
-, "SHLVL", "HOME", "C_IS", "DESKTOP_SESSION", "LOGNAME", "TERM"
-, "PATH", "DISPLAY"};
-char *s;
-int i;
-for (i = 0; i < 12; i++)
+int i = 0, x = 0;
+while (environ[i])
 {
-s = get_env(envnames[i]);
-if (s)
-{
-write(STDOUT_FILENO, envnames[i], strlen(envnames[i]));
-write(STDOUT_FILENO, "=", 1);
-write(STDOUT_FILENO, s, strlen(s));
+x = _strlen(environ[i]);
+write(STDOUT_FILENO, environ[i], x);
 write(STDOUT_FILENO, "\n", 1);
-}
+i++;
 }
 return (0);
 }
