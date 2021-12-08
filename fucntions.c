@@ -46,9 +46,9 @@ if (c == -1)
 exit(0);
 }
 buffer[c - 1] = '\0';
-if (strcmp(buffer, "env") == 0)
+if (_strcmp(buffer, "env") == 0)
 printenv();
-if (strcmp(buffer, "exit") == 0)
+if (_strcmp(buffer, "exit") == 0)
 exit(0);
 return (buffer);
 }
@@ -113,15 +113,15 @@ i++;
 }
 j = i - 1;
 i = 0;
-strcat(x[0], "/");
-strcat(x[0], ch);
+_strcat(x[0], "/");
+_strcat(x[0], ch);
 while (stat(x[i], &st) != 0)
 {
 i++;
 if (i == j)
 break;
-strcat(x[i], "/");
-strcat(x[i], ch);
+_strcat(x[i], "/");
+_strcat(x[i], ch);
 }
 if (stat(x[i], &st) == 0)
 return (x[i]);
