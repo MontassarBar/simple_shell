@@ -1,5 +1,26 @@
 #include "header.h"
 /**
+ * _strcpy - copy a string to another string
+ *
+ * @dest: destination
+ * @src: source
+ *
+ * Return: pointer string
+ **/
+char *_strcpy(char *dest, char *src)
+{
+	int l, i;
+
+	l = _strlen(src);
+
+	for (i = 0; i <= l; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	return (src);
+}
+/**
  *get_env - get the environment
  *@name: pointer to the path name
  *Return: envv or NULL
