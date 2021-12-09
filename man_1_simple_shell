@@ -1,0 +1,50 @@
+"# shs man page
+."
+."
+.TH shs  "12 December 2021" "shs Manuel"
+
+.SH # NAME  sh — shell, the standard command language interpreter
+.SH ""
+
+.B shs
+
+
+.SH # DESCRIPTION 
+
+
+.The sh utility is a command language interpreter that shall
+execute commands read from a command line string, the standard
+input, or a specified file.
+
+Pathname expansion shall not fail due to the size of a file.
+
+Shell input and output redirections have an implementation-
+defined offset maximum that is established in the open file
+description.
+
+
+.SH # INPUT FILES
+.The input file shall be a text file, except that line lengths
+shall be unlimited. If the input file consists solely of zero or
+more blank lines and comments, sh shall exit with a zero exit
+status.
+
+
+.SH # ENVIRONMENT VARIABLES
+.ENV       .This variable, when and only when an interactive shell
+                 is invoked, shall be subjected to parameter expansion
+                 (see Section 2.6.2, Parameter Expansion) by the shell,
+                 and the resulting value shall be used as a pathname of
+                 a file containing shell commands to execute in the
+                 current environment.  The file need not be executable.
+                 If the expanded value of ENV is not an absolute
+                 pathname, the results are unspecified.  ENV shall be
+                 ignored if the real and effective user IDs or real and
+                 effective group IDs of the process are different.
+
+
+				 
+.SH # “AUTHOR"
+.SH ""
+
+Rayen Hedri && Montassar Barbouchi
