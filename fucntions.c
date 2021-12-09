@@ -101,7 +101,6 @@ str = strtok(path, ":");
 while (str)
 {
 x[i] = str;
-printf("%s\n", x[i]);
 str = strtok(NULL, ":");
 i++;
 }
@@ -109,14 +108,12 @@ x[i] = NULL;
 i = 0;
 _strcat(s, "/");
 _strcat(s, ch);
-printf("hiiii \n");
 while (stat(s, &st) != 0)
 {
-printf("%s\n", s);
 i++;
 if (!x[i])
 return (ch);
-s = strdup(x[i]);
+s = _strdup(x[i]);
 _strcat(s, "/");
 _strcat(s, ch);
 }
@@ -124,4 +121,39 @@ if(stat(s, &st) == 0)
 return (s);
 else
 return (ch);
+}
+/**
+ * _strdup - duplicate string in new memory addr
+ * @str: string
+ *
+ * Return: new string addr
+ **/
+char *_strdup(char *str)
+{
+	char *s;
+	unsigned int l, i;
+
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	else
+	{
+
+		l = _strlen(str);
+		s = malloc(l + 1);
+		if (s == NULL)
+		{
+			return (NULL);
+		}
+		for (i = 0; i <= l; i++)
+		{
+			s[i] = str[i];
+		}
+
+	}
+
+	return (s);
 }
