@@ -6,9 +6,7 @@
  - **Usage**
  - **Compiler**
  - **How does the shell work?**
- - **Basic Shell Features**
  - **List of allowed functions and system calls**
- - **Bugs**
  - **Contributors**
 
 ## About this project :bulb:
