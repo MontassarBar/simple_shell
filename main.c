@@ -21,9 +21,7 @@ x--;
 cmd = tok_buff(buffer);
 if (stat(cmd[0], &st) != 0)
 cmd[0] = pathcmd(cmd[0]);
-if (stat(cmd[0], &st) != 0)
-write(STDOUT_FILENO, "./hsh: No such file or directory\n", 34);
-else
+printf("\n%s\n", cmd[0]);
 _exec(cmd);
 }
 free(buffer);

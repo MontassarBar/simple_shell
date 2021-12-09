@@ -77,7 +77,7 @@ if (child == 0)
 {
 if (execve(cmd[0], cmd, NULL))
 {
-perror("./shell");
+perror("./hsh");
 exit(0);
 }
 }
@@ -92,35 +92,36 @@ return (0);
  */
 char *pathcmd(char *ch)
 {
-char *str, *x[100];
+char *str, *x[100], *s = malloc(1);
 char *path = malloc(5000);
 struct  stat st;
-int i = 0, j = 0;
+int i = 0;
 path = get_env("PATH");
 str = strtok(path, ":");
 while (str)
 {
 x[i] = str;
+printf("%s\n", x[i]);
 str = strtok(NULL, ":");
 i++;
 }
-j = i - 1;
+x[i] = NULL;
 i = 0;
-_strcat(x[0], "/");
-_strcat(x[0], ch);
-while (stat(x[i], &st) != 0)
+_strcat(s, "/");
+_strcat(s, ch);
+printf("hiiii \n");
+while (stat(s, &st) != 0)
 {
+printf("%s\n", s);
 i++;
-if (i == j)
-break;
-_strcat(x[i], "/");
-_strcat(x[i], ch);
+if (!x[i])
+return (ch);
+s = strdup(x[i]);
+_strcat(s, "/");
+_strcat(s, ch);
 }
-if (x[i + 1])
-{
-_strcat(x[i], "\0");
-return (x[i]);
-}
+if(stat(s, &st) == 0)
+return (s);
 else
-return (NULL);
+return (ch);
 }
