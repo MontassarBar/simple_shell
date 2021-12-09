@@ -1,7 +1,43 @@
 #include "header.h"
 /**
+ * _strdup - duplicate string in new memory addr
+ * @str: string
+ *
+ * Return: new string addr
+ **/
+char *_strdup(char *str)
+{
+	char *s;
+	unsigned int l, i;
+
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	else
+	{
+
+		l = _strlen(str);
+		s = malloc(l + 1);
+		if (s == NULL)
+		{
+			return (NULL);
+		}
+		for (i = 0; i <= l; i++)
+		{
+			s[i] = str[i];
+		}
+
+	}
+
+	return (s);
+}
+/**
  * shellloop - loop
- * 
+ * @x: integer
+ * Return: 0
  */
 int shellloop(int x)
 {
@@ -32,9 +68,9 @@ return (0);
  */
 int main(void)
 {
-    if (isatty(STDIN_FILENO) == 1)
-    shellloop(1000);
-    else
-    shellloop(1);
-    return(0);
+if (isatty(STDIN_FILENO) == 1)
+shellloop(1000);
+else
+shellloop(1);
+return (0);
 }
