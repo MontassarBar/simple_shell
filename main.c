@@ -1,9 +1,9 @@
 #include "header.h"
 /**
- *main - sheeel
- *Return: 0
+ * shellloop - loop
+ * 
  */
-int main(void)
+int shellloop(int x)
 {
 char *buffer, **cmd;
 struct stat st;
@@ -14,18 +14,30 @@ perror("Unable to allocate buffer");
 free(buffer);
 exit(1);
 }
-while (1)
+while (x)
 {
 buffer = get_line();
-
+x--;
 cmd = tok_buff(buffer);
 if (stat(cmd[0], &st) != 0)
 cmd[0] = pathcmd(cmd[0]);
-if (cmd[0] == NULL)
+if (stat(cmd[0], &st) != 0)
 write(STDOUT_FILENO, "./hsh: No such file or directory\n", 34);
 else
 _exec(cmd);
 }
 free(buffer);
 return (0);
+}
+/**
+ *main - sheeel
+ *Return: 0
+ */
+int main(void)
+{
+    if (isatty(STDIN_FILENO) == 1)
+    shellloop(1000);
+    else
+    shellloop(1);
+    return(0);
 }

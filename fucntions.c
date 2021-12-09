@@ -116,8 +116,11 @@ break;
 _strcat(x[i], "/");
 _strcat(x[i], ch);
 }
-if (i < 18)
+if (x[i + 1])
+{
+_strcat(x[i], "\0");
 return (x[i]);
+}
 else
 return (NULL);
 }

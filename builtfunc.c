@@ -41,6 +41,7 @@ j++;
 while (environ[i][j])
 {
 envv[x] = environ[i][j];
+envv[x + 1] = '\0';
 j++;
 x++;
 }
