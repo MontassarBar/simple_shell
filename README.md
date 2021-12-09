@@ -1,30 +1,29 @@
-# Custom Simple Shell HSH :shell:
+# Custom Simple Shell HSH 
 
 
-## Table of contents :scroll:
+## Table of contents 
  - **About this project**
  - **Usage**
  - **Compiler**
  - **How does the shell work?**
- - **Basic Shell Features**
  - **List of allowed functions and system calls**
- - **Bugs**
  - **Contributors**
 
-## About this project :bulb:
+
+## About this project:
 This project was created for study and learning purposes for Holberton School :tunisia:. To create our custom Command Line Interpreter or (CLI).
 It is a **simple UNIX Command Line Interpreter** developed in the [C Programming Language](https://en.wikipedia.org/wiki/C_(programming_language)) and based on the first ever Unix Shell : The [Thompson Shell](https://en.wikipedia.org/wiki/Thompson_shell) introduced in the first version of Unix in 1971, and was written by **Ken Thompson**.
 It is not used anymore and was replaced by The [Bourne Shell](https://en.wikipedia.org/wiki/Bourne_shell) in 1979.
 
-## Usage :wrench:
+## Usage:
 Please clone the repository by copying this :
 **https://github.com/MontassarBar/simple_shell.git**
 
-## Compiler :wrench:
+## Compiler:
 Please compile by copying this :
 **gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh**
 
-## How does the shell work?:mag_right:
+## How does the shell work?
 Since the early days of Unix, the shell has been part of the user's interface with the operating system. 
 The first Unix shell (the Thompson shell) had very limited features, mainly I/O redirection and command pipelines. Later shells expanded on that early shell and added more and more capabilities, which gave us powerful features that include word expansion, history substitution, loops and conditional expressions, among many others.
 This model of the **Shell** acts as the user's interactive interface to the operating system.
@@ -32,7 +31,7 @@ It is the layer of programmming that understands and executes the commands the u
 As the outer layer of the operating system, the **Shell** can be contrasted with the **Kernel** the operating system inner most layer or core.
 
 
-## List of allowed functions and system calls:hammer_and_wrench:
+## List of allowed functions and system calls:
  - access (man 2 access)
  - chdir (man 2 chdir)
  - close (man 2 close)
@@ -59,6 +58,6 @@ As the outer layer of the operating system, the **Shell** can be contrasted with
  - fstat (__fxstat) (man 2 fstat)
  - strtok (man 3 strtok)
 
-## Collaborators 
+## Collaborators:
 [Montassar Barbouchi](https://github.com/MontassarBar)
 [Rayen Hedri](https://github.com/rayenhdr93)
