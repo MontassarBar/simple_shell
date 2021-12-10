@@ -5,6 +5,7 @@
  - **About this project**
  - **Usage**
  - **Compiler**
+ - **execute**
  - **How does the shell work?**
  - **List of allowed functions and system calls**
  - **Contributors**
@@ -22,6 +23,9 @@ Please clone the repository by copying this :
 ## Compiler:
 Please compile by copying this :
 **gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh**
+
+## execute:
+**./hsh**
 
 ## How does the shell work?
 Since the early days of Unix, the shell has been part of the user's interface with the operating system. 
