@@ -1,37 +1,32 @@
-"# shs man page
-."
-."
-.TH shs  "12 December 2021" "shs Manuel"
+.TH "Holberton School Simple Shell" 1
+.SH NAME
+hsh \- holberton School simple shell, a simple shell like sh
+.SH SYNOPSIS
 
-.SH # NAME  sh — shell, the standard command language interpreter
-.SH ""
+$ [command [argument...]]
 
-.B shs
-
-
+echo "[command [argument...]]" | ./hsh
 .SH # DESCRIPTION 
-
-
-.The sh utility is a command language interpreter that shall
+The sh utility is a command language interpreter that shall
 execute commands read from a command line string, the standard
 input, or a specified file.
-
 Pathname expansion shall not fail due to the size of a file.
-
 Shell input and output redirections have an implementation-
 defined offset maximum that is established in the open file
 description.
+.SH # OPERANDS
+Command: A command/program it can be a builtin like cd, a full path to an executable like /bin/ls or an executable located in a directory in $PATH.
 
-
+Argument: Optinal arguments for the given program or builtin. 
 .SH # INPUT FILES
-.The input file shall be a text file, except that line lengths
+The input file shall be a text file, except that line lengths
 shall be unlimited. If the input file consists solely of zero or
 more blank lines and comments, sh shall exit with a zero exit
 status.
 
 
-.SH # ENVIRONMENT VARIABLES
-.ENV       .This variable, when and only when an interactive shell
+.SH # BUILTINS
+ENV       	This variable, when and only when an interactive shell
                  is invoked, shall be subjected to parameter expansion
                  (see Section 2.6.2, Parameter Expansion) by the shell,
                  and the resulting value shall be used as a pathname of
@@ -43,8 +38,8 @@ status.
                  effective group IDs of the process are different.
 
 
-				 
-.SH # “AUTHOR"
+
+.SH # "AUTHOR"
 .SH ""
 
 Rayen Hedri && Montassar Barbouchi
