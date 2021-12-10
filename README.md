@@ -6,6 +6,7 @@
  - **Usage**
  - **Compiler**
  - **execute**
+ - **example**
  - **How does the shell work?**
  - **List of allowed functions and system calls**
  - **Contributors**
@@ -26,6 +27,9 @@ Please compile by copying this :
 
 ## execute:
 **./hsh**
+
+## example:
+<img src="https://i.imgur.com/4RGpy2v_d.webp?maxwidth=760&fidelity=grand" alt="mon">
 
 ## How does the shell work?
 Since the early days of Unix, the shell has been part of the user's interface with the operating system. 
